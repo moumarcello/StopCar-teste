@@ -26,7 +26,7 @@ body {
 }
 
 img{    
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 200px;
 }
 .container {
@@ -44,16 +44,20 @@ label {
     display: block;
     text-align: left;
     margin: 20px 0 10px;
-    font-size: 1em;
+    font-size: 16px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 7px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: transparent;
     color: white;
+    font-size: 16px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    
 }
 
 input::placeholder {
@@ -64,8 +68,7 @@ input::placeholder {
 .checkbox-container {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    font-size: 0.8em;
+    font-size: 16px;
 }
 
 .checkbox-container input {
@@ -84,12 +87,13 @@ input::placeholder {
 
 .button {
     width: 100%;
-    padding: 15px;
+    padding: 7px;
     background-color: #0095ff;
     border: none;
     border-radius: 25px;
     color: white;
-    font-size: 1em;
+    font-size: 16px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     cursor: pointer;
     margin-top: 10px;
     transition: transform 0.2s ease, background-color 0.3s ease;
@@ -105,7 +109,7 @@ input::placeholder {
 
 .link {
     margin-top: 15px;
-    font-size: 0.9em;
+    font-size: 16px;
 }
 
 .link a {
@@ -128,16 +132,17 @@ input::placeholder {
 
 .exit-button {
     width: 50%;
-    padding: 15px;
+    padding: 7px;
     border: 1px solid white;
     border-radius: 25px;
     color: white;
-    font-size: 1em;
+    font-size: 16px;
     cursor: pointer;
     background-color: transparent;
     text-align: center;
     transition: transform 0.2s ease;
     margin-top: 30px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 .exit-button:hover {
