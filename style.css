@@ -15,7 +15,7 @@ body {
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     overflow: hidden;
     touch-action: none;
 }
