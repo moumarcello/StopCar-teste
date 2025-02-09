@@ -44,17 +44,19 @@
 
     <script>
         document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let email = document.getElementById("email").value;
-            let senha = document.getElementById("senha").value;
-            let nome = document.getElementById("nome").value;
+        event.preventDefault();
+        let nome = document.getElementById("nome").value.trim(); // Pega o nome e remove espaços extras
+        let email = document.getElementById("email").value.trim();
+        let senha = document.getElementById("senha").value.trim();
 
-            localStorage.setItem("emailCadastrado", email);
-            localStorage.setItem("senhaCadastrada", senha);
-            localStorage.setItem("nomeCadastrado", nome);
+        // Salva os dados no localStorage
+        localStorage.setItem("nomeUsuario", nome);
+        localStorage.setItem("emailCadastrado", email);
+        localStorage.setItem("senhaCadastrada", senha);
 
-            window.location.href = "index.html"; // Redireciona para login
-        });
+        // Redireciona para a tela de login
+        window.location.href = "index.html";
+    });
     </script>
     
 </body>
