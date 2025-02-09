@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            transition: all 0.3s ease;
+        }
+        .success {
+            background-color: #4CAF50 !important;
+            color: white !important;
+        }
+        .error {
+            background-color: #FF5733 !important;
+            color: white !important;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,16 +25,16 @@
         <h1>Login</h1>
         <form id="loginForm">
             <label for="email">Seu e-mail</label>
-            <input type="email" id="email" placeholder="seuemail@email.com" required>
+            <input type="email" id="emailLogin" placeholder="seuemail@email.com" required>
             
             <label for="senha">Sua senha</label>
-            <input type="password" id="senha" placeholder="********" required>
+            <input type="password" id="senhaLogin" placeholder="********" required>
             
             <div class="checkbox-container">
                 <input type="checkbox" id="manter-logado">
                 <label for="manter-logado">Manter-me logado</label>
             </div>
-            <button class="button" type="submit">Entrar</button>
+            <button class="button" id="loginButton" type="submit">Entrar</button>
         </form>
         <div class="link">
             Não tem uma conta? <a href="cadastro.html">Se cadastre</a>
@@ -30,8 +43,27 @@
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Evita o envio do formulário
-            window.location.href = "interna1.html"; // Redireciona para a página interna
+            event.preventDefault();
+            let emailDigitado = document.getElementById("emailLogin").value;
+            let senhaDigitada = document.getElementById("senhaLogin").value;
+            let emailCadastrado = localStorage.getItem("emailCadastrado");
+            let senhaCadastrada = localStorage.getItem("senhaCadastrada");
+            let loginButton = document.getElementById("loginButton");
+
+            if (emailDigitado === emailCadastrado && senhaDigitada === senhaCadastrada) {
+                loginButton.textContent = "Login realizado!";
+                loginButton.classList.add("success");
+                setTimeout(() => {
+                    window.location.href = "interna1.html";
+                }, 2000);
+            } else {
+                loginButton.textContent = "Senha incorreta!";
+                loginButton.classList.add("error");
+                setTimeout(() => {
+                    loginButton.textContent = "Entrar";
+                    loginButton.classList.remove("error");
+                }, 2000);
+            }
         });
     </script>
 </body>

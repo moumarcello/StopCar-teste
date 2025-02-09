@@ -17,6 +17,13 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.scrollable {
+    overflow: auto !important; /* Permite rolagem */
+    touch-action: auto; /* Habilita toque para rolar */
 }
 
 img{
