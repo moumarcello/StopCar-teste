@@ -15,14 +15,21 @@
 <body>
     <div class="container">
         <img src="logo.png" alt="Logo Stop Car">
-        <h1>Fulano de tal</h1>
+        <h1 id="nomeUsuario">Usuário</h1>
         <h2>Escolha qual <strong>estacionamento</strong> você deseja reservar a sua vaga:</h2>
         <button class="button">Bloco 1</button>
         <button class="button">Bloco 2</button>
         <button class="button">Externo</button>
         <a href="index.html"><button class="exit-button">Sair</button></a>
     </div>
+
+    <script>
+        // Recupera o nome do usuário armazenado no cadastro
+        let nomeSalvo = localStorage.getItem("nomeCadastrado");
+        
+        if (nomeSalvo) {
+            document.getElementById("nomeUsuario").textContent = nomeSalvo;
+        }
+    </script>
 </body>
-
 </html>
-

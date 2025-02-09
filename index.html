@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -10,11 +9,11 @@
             transition: all 0.3s ease;
         }
         .success {
-            background-color: #4CAF50 !important;
+            background-color: #03399e !important;
             color: white !important;
         }
         .error {
-            background-color: #FF5733 !important;
+            background-color: #770000 !important;
             color: white !important;
         }
     </style>
@@ -50,21 +49,38 @@
             let senhaCadastrada = localStorage.getItem("senhaCadastrada");
             let loginButton = document.getElementById("loginButton");
 
-            if (emailDigitado === emailCadastrado && senhaDigitada === senhaCadastrada) {
-                loginButton.textContent = "Login realizado!";
-                loginButton.classList.add("success");
+            if (!emailCadastrado || emailDigitado !== emailCadastrado) {
+                loginButton.textContent = "Usuário não registrado!";
+                loginButton.classList.add("error");
                 setTimeout(() => {
-                    window.location.href = "interna1.html";
+                    loginButton.textContent = "Entrar";
+                    loginButton.classList.remove("error");
                 }, 2000);
-            } else {
+            } else if (senhaDigitada !== senhaCadastrada) {
                 loginButton.textContent = "Senha incorreta!";
                 loginButton.classList.add("error");
                 setTimeout(() => {
                     loginButton.textContent = "Entrar";
                     loginButton.classList.remove("error");
                 }, 2000);
+            } else {
+                loginButton.textContent = "Login realizado!";
+                loginButton.classList.add("success");
+                setTimeout(() => {
+                    window.location.href = "interna1.html";
+                }, 2000);
             }
         });
+        document.getElementById("toggleSenha").addEventListener("click", function () {
+        let senhaInput = document.getElementById("senhaLogin");
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            this.textContent = "🙈"; // Ícone alternativo
+        } else {
+            senhaInput.type = "password";
+            this.textContent = "👁️";
+        }
+    });
     </script>
 </body>
 </html>

@@ -15,7 +15,6 @@ body {
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 100px;
     overflow: hidden;
     touch-action: none;
@@ -26,12 +25,12 @@ body {
     touch-action: auto; /* Habilita toque para rolar */
 }
 
-img{
-        margin-bottom: 40px;
-        width: 200px;
+img{    
+    margin-bottom: 40px;
+    width: 200px;
 }
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     text-align: center;
 }
