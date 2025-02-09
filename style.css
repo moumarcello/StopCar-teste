@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    background: linear-gradient(to bottom, #0f1e2e, #040a14);
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+img{
+        margin-bottom: 40px;
+        width: 200px;
+}
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 20px 0 10px;
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+input::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.checkbox-container a{
+    color: #0095ff;
+    text-decoration: none;
+
+}
+.checkbox-container a:hover{
+    text-decoration: underline;
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0095ff;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.link a {
+    color: #0095ff;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a página interna1.html */
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.exit-button {
+    width: 50%;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    transition: transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.exit-button:hover {
+    transform: scale(1.05);
+}
+
+.exit-button:active {
+    transform: scale(0.95);
+}
